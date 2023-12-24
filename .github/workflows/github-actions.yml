@@ -2,7 +2,7 @@ name: Checks
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: [push]
 jobs:
-  Explore-GitHub-Actions:
+  Internal-Checks:
     runs-on: ubuntu-latest
     steps:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
@@ -20,5 +20,5 @@ jobs:
           vendor/bin/phpcs
       - name: PHP Unit tests
         run: |
-          vendor/bin/phpunit
+          vendor/bin/phpunit --no-interaction --verbose --debug
       - run: echo "🍏 This job's status is ${{ job.status }}."
