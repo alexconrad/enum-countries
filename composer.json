@@ -1,18 +1,29 @@
 {
-    "name": "alexconrad/enum-countries",
-    "autoload": {
-        "psr-4": {
-            "EnumCountriesIso3166\\": "src/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Tests\\EnumCountriesIso3166\\": "tests/Unit"
-        }
-    },
-    "require-dev": {
-        "ext-intl": "*",
-        "squizlabs/php_codesniffer": "^3.8",
-        "phpunit/phpunit": "10"
+  "name": "alexconrad/enum-countries",
+  "type": "library",
+  "homepage": "https://github.com/alexconrad/easy-mysql",
+  "keywords": [
+    "enum countries"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Tamcencu Alexandru",
+      "email": "conrad1@gmail.com"
     }
+  ],
+  "autoload": {
+    "psr-4": {
+      "EnumCountriesIso3166\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\EnumCountriesIso3166\\": "tests/Unit"
+    }
+  },
+  "require-dev": {
+    "squizlabs/php_codesniffer": "^3.8",
+    "phpunit/phpunit": "10"
+  }
 }
