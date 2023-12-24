@@ -82,5 +82,6 @@ class CountryServiceTest extends TestCase
         $alpha2 = $this->sut->fromNumericCode($numeric);
         $sameAlpha3 = $this->sut->alpha3($alpha2);
         self::assertSame($alpha3, $sameAlpha3, $alpha3->name . " numeric conversion failed.");
+        self::assertTrue(false,'TEST fail!');
     }
 }
