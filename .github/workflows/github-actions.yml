@@ -20,5 +20,5 @@ jobs:
           vendor/bin/phpcs
       - name: PHP Unit tests
         run: |
-          vendor/bin/phpunit --no-interaction --verbose --debug
+          vendor/bin/phpunit --verbose --debug
       - run: echo "🍏 This job's status is ${{ job.status }}."
