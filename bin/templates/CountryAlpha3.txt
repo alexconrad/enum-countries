@@ -1,0 +1,10 @@
+<?php
+
+declare(strict_types=1);
+
+/** NAMESPACE */
+
+enum CountryAlpha3: string
+{
+/** SEPARATOR */
+}

@@ -1,0 +1,19 @@
+name: Checks
+run-name: ${{ github.actor }} running tests
+on: [push]
+jobs:
+  Internal-Checks:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v4
+      - name: Composer install
+        run: |
+          composer install
+      - name: PHP Code sniffer
+        run: |
+          vendor/bin/phpcs
+      - name: PHP Unit tests
+        run: |
+          vendor/bin/phpunit
+      - run: echo "This job's status is ${{ job.status }}."

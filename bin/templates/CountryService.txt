@@ -1,0 +1,41 @@
+<?php
+
+declare(strict_types=1);
+
+/** NAMESPACE */
+
+class CountryService
+{
+    public function alpha3(Country $country): CountryAlpha3
+    {
+        switch ($country) {
+/** SEPARATOR */
+        }
+
+        throw new CountryException('No alpha3 value for ' . $country->name);
+    }
+
+    public function alpha2(CountryAlpha3 $countryAlpha3): Country
+    {
+        switch ($countryAlpha3) {
+/** SEPARATOR */
+        }
+
+        throw new CountryException('No alpha2 value for ' . $countryAlpha3->name);
+    }
+
+    public function numericCode(Country|CountryAlpha3 $country): int
+    {
+        switch ($country) {
+/** SEPARATOR */
+        }
+        throw new CountryException('No numeric match for  ' . $country->name);
+    }
+
+    public function fromNumericCode(int $code): Country
+    {
+        return match ($code) {
+/** SEPARATOR */
+        };
+    }
+}
