@@ -4,6 +4,7 @@
 
     <!-- Paths to check -->
     <file>src/</file>
+    <file>tests/Unit/</file>
     <file>bin/generate.php</file>
 
     <rule ref="PSR12"/>
