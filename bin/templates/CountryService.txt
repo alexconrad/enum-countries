@@ -38,4 +38,12 @@ class CountryService
 /** SEPARATOR */
         };
     }
+
+    public function getName(Country|CountryAlpha3 $country): string
+    {
+        switch ($country) {
+/** SEPARATOR */
+        };
+        throw new CountryException('No numeric match for  ' . $country->name);
+    }
 }

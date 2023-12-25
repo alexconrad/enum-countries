@@ -4,6 +4,7 @@
 
     <!-- Paths to check -->
     <file>src/</file>
+    <file>bin/generate.php</file>
 
     <rule ref="PSR12"/>
     <rule ref="Generic.Files.LineLength">
