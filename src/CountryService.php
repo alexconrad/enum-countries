@@ -2026,4 +2026,758 @@ class CountryService
             248 => Country::AX,
         };
     }
+
+    public function getName(Country|CountryAlpha3 $country): string
+    {
+        switch ($country) {
+            case Country::AF:
+            case CountryAlpha3::AFG:
+                return 'Afghanistan';
+            case Country::AL:
+            case CountryAlpha3::ALB:
+                return 'Albania';
+            case Country::DZ:
+            case CountryAlpha3::DZA:
+                return 'Algeria';
+            case Country::AS:
+            case CountryAlpha3::ASM:
+                return 'American Samoa';
+            case Country::AD:
+            case CountryAlpha3::AND:
+                return 'Andorra';
+            case Country::AO:
+            case CountryAlpha3::AGO:
+                return 'Angola';
+            case Country::AI:
+            case CountryAlpha3::AIA:
+                return 'Anguilla';
+            case Country::AQ:
+            case CountryAlpha3::ATA:
+                return 'Antarctica';
+            case Country::AG:
+            case CountryAlpha3::ATG:
+                return 'Antigua and Barbuda';
+            case Country::AR:
+            case CountryAlpha3::ARG:
+                return 'Argentina';
+            case Country::AM:
+            case CountryAlpha3::ARM:
+                return 'Armenia';
+            case Country::AW:
+            case CountryAlpha3::ABW:
+                return 'Aruba';
+            case Country::AU:
+            case CountryAlpha3::AUS:
+                return 'Australia';
+            case Country::AT:
+            case CountryAlpha3::AUT:
+                return 'Austria';
+            case Country::AZ:
+            case CountryAlpha3::AZE:
+                return 'Azerbaijan';
+            case Country::BS:
+            case CountryAlpha3::BHS:
+                return 'Bahamas (the)';
+            case Country::BH:
+            case CountryAlpha3::BHR:
+                return 'Bahrain';
+            case Country::BD:
+            case CountryAlpha3::BGD:
+                return 'Bangladesh';
+            case Country::BB:
+            case CountryAlpha3::BRB:
+                return 'Barbados';
+            case Country::BY:
+            case CountryAlpha3::BLR:
+                return 'Belarus';
+            case Country::BE:
+            case CountryAlpha3::BEL:
+                return 'Belgium';
+            case Country::BZ:
+            case CountryAlpha3::BLZ:
+                return 'Belize';
+            case Country::BJ:
+            case CountryAlpha3::BEN:
+                return 'Benin';
+            case Country::BM:
+            case CountryAlpha3::BMU:
+                return 'Bermuda';
+            case Country::BT:
+            case CountryAlpha3::BTN:
+                return 'Bhutan';
+            case Country::BO:
+            case CountryAlpha3::BOL:
+                return 'Bolivia (Plurinational State of)';
+            case Country::BQ:
+            case CountryAlpha3::BES:
+                return 'Bonaire, Sint Eustatius and Saba';
+            case Country::BA:
+            case CountryAlpha3::BIH:
+                return 'Bosnia and Herzegovina';
+            case Country::BW:
+            case CountryAlpha3::BWA:
+                return 'Botswana';
+            case Country::BV:
+            case CountryAlpha3::BVT:
+                return 'Bouvet Island';
+            case Country::BR:
+            case CountryAlpha3::BRA:
+                return 'Brazil';
+            case Country::IO:
+            case CountryAlpha3::IOT:
+                return 'British Indian Ocean Territory (the)';
+            case Country::BN:
+            case CountryAlpha3::BRN:
+                return 'Brunei Darussalam';
+            case Country::BG:
+            case CountryAlpha3::BGR:
+                return 'Bulgaria';
+            case Country::BF:
+            case CountryAlpha3::BFA:
+                return 'Burkina Faso';
+            case Country::BI:
+            case CountryAlpha3::BDI:
+                return 'Burundi';
+            case Country::CV:
+            case CountryAlpha3::CPV:
+                return 'Cabo Verde';
+            case Country::KH:
+            case CountryAlpha3::KHM:
+                return 'Cambodia';
+            case Country::CM:
+            case CountryAlpha3::CMR:
+                return 'Cameroon';
+            case Country::CA:
+            case CountryAlpha3::CAN:
+                return 'Canada';
+            case Country::KY:
+            case CountryAlpha3::CYM:
+                return 'Cayman Islands (the)';
+            case Country::CF:
+            case CountryAlpha3::CAF:
+                return 'Central African Republic (the)';
+            case Country::TD:
+            case CountryAlpha3::TCD:
+                return 'Chad';
+            case Country::CL:
+            case CountryAlpha3::CHL:
+                return 'Chile';
+            case Country::CN:
+            case CountryAlpha3::CHN:
+                return 'China';
+            case Country::CX:
+            case CountryAlpha3::CXR:
+                return 'Christmas Island';
+            case Country::CC:
+            case CountryAlpha3::CCK:
+                return 'Cocos (Keeling) Islands (the)';
+            case Country::CO:
+            case CountryAlpha3::COL:
+                return 'Colombia';
+            case Country::KM:
+            case CountryAlpha3::COM:
+                return 'Comoros (the)';
+            case Country::CD:
+            case CountryAlpha3::COD:
+                return 'Congo (the Democratic Republic of the)';
+            case Country::CG:
+            case CountryAlpha3::COG:
+                return 'Congo (the)';
+            case Country::CK:
+            case CountryAlpha3::COK:
+                return 'Cook Islands (the)';
+            case Country::CR:
+            case CountryAlpha3::CRI:
+                return 'Costa Rica';
+            case Country::HR:
+            case CountryAlpha3::HRV:
+                return 'Croatia';
+            case Country::CU:
+            case CountryAlpha3::CUB:
+                return 'Cuba';
+            case Country::CW:
+            case CountryAlpha3::CUW:
+                return 'Curacao';
+            case Country::CY:
+            case CountryAlpha3::CYP:
+                return 'Cyprus';
+            case Country::CZ:
+            case CountryAlpha3::CZE:
+                return 'Czechia';
+            case Country::CI:
+            case CountryAlpha3::CIV:
+                return 'Cote d\'Ivoire';
+            case Country::DK:
+            case CountryAlpha3::DNK:
+                return 'Denmark';
+            case Country::DJ:
+            case CountryAlpha3::DJI:
+                return 'Djibouti';
+            case Country::DM:
+            case CountryAlpha3::DMA:
+                return 'Dominica';
+            case Country::DO:
+            case CountryAlpha3::DOM:
+                return 'Dominican Republic (the)';
+            case Country::EC:
+            case CountryAlpha3::ECU:
+                return 'Ecuador';
+            case Country::EG:
+            case CountryAlpha3::EGY:
+                return 'Egypt';
+            case Country::SV:
+            case CountryAlpha3::SLV:
+                return 'El Salvador';
+            case Country::GQ:
+            case CountryAlpha3::GNQ:
+                return 'Equatorial Guinea';
+            case Country::ER:
+            case CountryAlpha3::ERI:
+                return 'Eritrea';
+            case Country::EE:
+            case CountryAlpha3::EST:
+                return 'Estonia';
+            case Country::SZ:
+            case CountryAlpha3::SWZ:
+                return 'Eswatini';
+            case Country::ET:
+            case CountryAlpha3::ETH:
+                return 'Ethiopia';
+            case Country::FK:
+            case CountryAlpha3::FLK:
+                return 'Falkland Islands (the) [Malvinas]';
+            case Country::FO:
+            case CountryAlpha3::FRO:
+                return 'Faroe Islands (the)';
+            case Country::FJ:
+            case CountryAlpha3::FJI:
+                return 'Fiji';
+            case Country::FI:
+            case CountryAlpha3::FIN:
+                return 'Finland';
+            case Country::FR:
+            case CountryAlpha3::FRA:
+                return 'France';
+            case Country::GF:
+            case CountryAlpha3::GUF:
+                return 'French Guiana';
+            case Country::PF:
+            case CountryAlpha3::PYF:
+                return 'French Polynesia';
+            case Country::TF:
+            case CountryAlpha3::ATF:
+                return 'French Southern Territories (the)';
+            case Country::GA:
+            case CountryAlpha3::GAB:
+                return 'Gabon';
+            case Country::GM:
+            case CountryAlpha3::GMB:
+                return 'Gambia (the)';
+            case Country::GE:
+            case CountryAlpha3::GEO:
+                return 'Georgia';
+            case Country::DE:
+            case CountryAlpha3::DEU:
+                return 'Germany';
+            case Country::GH:
+            case CountryAlpha3::GHA:
+                return 'Ghana';
+            case Country::GI:
+            case CountryAlpha3::GIB:
+                return 'Gibraltar';
+            case Country::GR:
+            case CountryAlpha3::GRC:
+                return 'Greece';
+            case Country::GL:
+            case CountryAlpha3::GRL:
+                return 'Greenland';
+            case Country::GD:
+            case CountryAlpha3::GRD:
+                return 'Grenada';
+            case Country::GP:
+            case CountryAlpha3::GLP:
+                return 'Guadeloupe';
+            case Country::GU:
+            case CountryAlpha3::GUM:
+                return 'Guam';
+            case Country::GT:
+            case CountryAlpha3::GTM:
+                return 'Guatemala';
+            case Country::GG:
+            case CountryAlpha3::GGY:
+                return 'Guernsey';
+            case Country::GN:
+            case CountryAlpha3::GIN:
+                return 'Guinea';
+            case Country::GW:
+            case CountryAlpha3::GNB:
+                return 'Guinea-Bissau';
+            case Country::GY:
+            case CountryAlpha3::GUY:
+                return 'Guyana';
+            case Country::HT:
+            case CountryAlpha3::HTI:
+                return 'Haiti';
+            case Country::HM:
+            case CountryAlpha3::HMD:
+                return 'Heard Island and McDonald Islands';
+            case Country::VA:
+            case CountryAlpha3::VAT:
+                return 'Holy See (the)';
+            case Country::HN:
+            case CountryAlpha3::HND:
+                return 'Honduras';
+            case Country::HK:
+            case CountryAlpha3::HKG:
+                return 'Hong Kong';
+            case Country::HU:
+            case CountryAlpha3::HUN:
+                return 'Hungary';
+            case Country::IS:
+            case CountryAlpha3::ISL:
+                return 'Iceland';
+            case Country::IN:
+            case CountryAlpha3::IND:
+                return 'India';
+            case Country::ID:
+            case CountryAlpha3::IDN:
+                return 'Indonesia';
+            case Country::IR:
+            case CountryAlpha3::IRN:
+                return 'Iran (Islamic Republic of)';
+            case Country::IQ:
+            case CountryAlpha3::IRQ:
+                return 'Iraq';
+            case Country::IE:
+            case CountryAlpha3::IRL:
+                return 'Ireland';
+            case Country::IM:
+            case CountryAlpha3::IMN:
+                return 'Isle of Man';
+            case Country::IL:
+            case CountryAlpha3::ISR:
+                return 'Israel';
+            case Country::IT:
+            case CountryAlpha3::ITA:
+                return 'Italy';
+            case Country::JM:
+            case CountryAlpha3::JAM:
+                return 'Jamaica';
+            case Country::JP:
+            case CountryAlpha3::JPN:
+                return 'Japan';
+            case Country::JE:
+            case CountryAlpha3::JEY:
+                return 'Jersey';
+            case Country::JO:
+            case CountryAlpha3::JOR:
+                return 'Jordan';
+            case Country::KZ:
+            case CountryAlpha3::KAZ:
+                return 'Kazakhstan';
+            case Country::KE:
+            case CountryAlpha3::KEN:
+                return 'Kenya';
+            case Country::KI:
+            case CountryAlpha3::KIR:
+                return 'Kiribati';
+            case Country::KP:
+            case CountryAlpha3::PRK:
+                return 'Korea (the Democratic People\'s Republic of)';
+            case Country::KR:
+            case CountryAlpha3::KOR:
+                return 'Korea (the Republic of)';
+            case Country::KW:
+            case CountryAlpha3::KWT:
+                return 'Kuwait';
+            case Country::KG:
+            case CountryAlpha3::KGZ:
+                return 'Kyrgyzstan';
+            case Country::LA:
+            case CountryAlpha3::LAO:
+                return 'Lao People\'s Democratic Republic (the)';
+            case Country::LV:
+            case CountryAlpha3::LVA:
+                return 'Latvia';
+            case Country::LB:
+            case CountryAlpha3::LBN:
+                return 'Lebanon';
+            case Country::LS:
+            case CountryAlpha3::LSO:
+                return 'Lesotho';
+            case Country::LR:
+            case CountryAlpha3::LBR:
+                return 'Liberia';
+            case Country::LY:
+            case CountryAlpha3::LBY:
+                return 'Libya';
+            case Country::LI:
+            case CountryAlpha3::LIE:
+                return 'Liechtenstein';
+            case Country::LT:
+            case CountryAlpha3::LTU:
+                return 'Lithuania';
+            case Country::LU:
+            case CountryAlpha3::LUX:
+                return 'Luxembourg';
+            case Country::MO:
+            case CountryAlpha3::MAC:
+                return 'Macao';
+            case Country::MG:
+            case CountryAlpha3::MDG:
+                return 'Madagascar';
+            case Country::MW:
+            case CountryAlpha3::MWI:
+                return 'Malawi';
+            case Country::MY:
+            case CountryAlpha3::MYS:
+                return 'Malaysia';
+            case Country::MV:
+            case CountryAlpha3::MDV:
+                return 'Maldives';
+            case Country::ML:
+            case CountryAlpha3::MLI:
+                return 'Mali';
+            case Country::MT:
+            case CountryAlpha3::MLT:
+                return 'Malta';
+            case Country::MH:
+            case CountryAlpha3::MHL:
+                return 'Marshall Islands (the)';
+            case Country::MQ:
+            case CountryAlpha3::MTQ:
+                return 'Martinique';
+            case Country::MR:
+            case CountryAlpha3::MRT:
+                return 'Mauritania';
+            case Country::MU:
+            case CountryAlpha3::MUS:
+                return 'Mauritius';
+            case Country::YT:
+            case CountryAlpha3::MYT:
+                return 'Mayotte';
+            case Country::MX:
+            case CountryAlpha3::MEX:
+                return 'Mexico';
+            case Country::FM:
+            case CountryAlpha3::FSM:
+                return 'Micronesia (Federated States of)';
+            case Country::MD:
+            case CountryAlpha3::MDA:
+                return 'Moldova (the Republic of)';
+            case Country::MC:
+            case CountryAlpha3::MCO:
+                return 'Monaco';
+            case Country::MN:
+            case CountryAlpha3::MNG:
+                return 'Mongolia';
+            case Country::ME:
+            case CountryAlpha3::MNE:
+                return 'Montenegro';
+            case Country::MS:
+            case CountryAlpha3::MSR:
+                return 'Montserrat';
+            case Country::MA:
+            case CountryAlpha3::MAR:
+                return 'Morocco';
+            case Country::MZ:
+            case CountryAlpha3::MOZ:
+                return 'Mozambique';
+            case Country::MM:
+            case CountryAlpha3::MMR:
+                return 'Myanmar';
+            case Country::NA:
+            case CountryAlpha3::NAM:
+                return 'Namibia';
+            case Country::NR:
+            case CountryAlpha3::NRU:
+                return 'Nauru';
+            case Country::NP:
+            case CountryAlpha3::NPL:
+                return 'Nepal';
+            case Country::NL:
+            case CountryAlpha3::NLD:
+                return 'Netherlands (Kingdom of the)';
+            case Country::NC:
+            case CountryAlpha3::NCL:
+                return 'New Caledonia';
+            case Country::NZ:
+            case CountryAlpha3::NZL:
+                return 'New Zealand';
+            case Country::NI:
+            case CountryAlpha3::NIC:
+                return 'Nicaragua';
+            case Country::NE:
+            case CountryAlpha3::NER:
+                return 'Niger (the)';
+            case Country::NG:
+            case CountryAlpha3::NGA:
+                return 'Nigeria';
+            case Country::NU:
+            case CountryAlpha3::NIU:
+                return 'Niue';
+            case Country::NF:
+            case CountryAlpha3::NFK:
+                return 'Norfolk Island';
+            case Country::MK:
+            case CountryAlpha3::MKD:
+                return 'North Macedonia';
+            case Country::MP:
+            case CountryAlpha3::MNP:
+                return 'Northern Mariana Islands (the)';
+            case Country::NO:
+            case CountryAlpha3::NOR:
+                return 'Norway';
+            case Country::OM:
+            case CountryAlpha3::OMN:
+                return 'Oman';
+            case Country::PK:
+            case CountryAlpha3::PAK:
+                return 'Pakistan';
+            case Country::PW:
+            case CountryAlpha3::PLW:
+                return 'Palau';
+            case Country::PS:
+            case CountryAlpha3::PSE:
+                return 'Palestine, State of';
+            case Country::PA:
+            case CountryAlpha3::PAN:
+                return 'Panama';
+            case Country::PG:
+            case CountryAlpha3::PNG:
+                return 'Papua New Guinea';
+            case Country::PY:
+            case CountryAlpha3::PRY:
+                return 'Paraguay';
+            case Country::PE:
+            case CountryAlpha3::PER:
+                return 'Peru';
+            case Country::PH:
+            case CountryAlpha3::PHL:
+                return 'Philippines (the)';
+            case Country::PN:
+            case CountryAlpha3::PCN:
+                return 'Pitcairn';
+            case Country::PL:
+            case CountryAlpha3::POL:
+                return 'Poland';
+            case Country::PT:
+            case CountryAlpha3::PRT:
+                return 'Portugal';
+            case Country::PR:
+            case CountryAlpha3::PRI:
+                return 'Puerto Rico';
+            case Country::QA:
+            case CountryAlpha3::QAT:
+                return 'Qatar';
+            case Country::RO:
+            case CountryAlpha3::ROU:
+                return 'Romania';
+            case Country::RU:
+            case CountryAlpha3::RUS:
+                return 'Russian Federation (the)';
+            case Country::RW:
+            case CountryAlpha3::RWA:
+                return 'Rwanda';
+            case Country::RE:
+            case CountryAlpha3::REU:
+                return 'Reunion';
+            case Country::BL:
+            case CountryAlpha3::BLM:
+                return 'Saint Barthelemy';
+            case Country::SH:
+            case CountryAlpha3::SHN:
+                return 'Saint Helena, Ascension and Tristan da Cunha';
+            case Country::KN:
+            case CountryAlpha3::KNA:
+                return 'Saint Kitts and Nevis';
+            case Country::LC:
+            case CountryAlpha3::LCA:
+                return 'Saint Lucia';
+            case Country::MF:
+            case CountryAlpha3::MAF:
+                return 'Saint Martin (French part)';
+            case Country::PM:
+            case CountryAlpha3::SPM:
+                return 'Saint Pierre and Miquelon';
+            case Country::VC:
+            case CountryAlpha3::VCT:
+                return 'Saint Vincent and the Grenadines';
+            case Country::WS:
+            case CountryAlpha3::WSM:
+                return 'Samoa';
+            case Country::SM:
+            case CountryAlpha3::SMR:
+                return 'San Marino';
+            case Country::ST:
+            case CountryAlpha3::STP:
+                return 'Sao Tome and Principe';
+            case Country::SA:
+            case CountryAlpha3::SAU:
+                return 'Saudi Arabia';
+            case Country::SN:
+            case CountryAlpha3::SEN:
+                return 'Senegal';
+            case Country::RS:
+            case CountryAlpha3::SRB:
+                return 'Serbia';
+            case Country::SC:
+            case CountryAlpha3::SYC:
+                return 'Seychelles';
+            case Country::SL:
+            case CountryAlpha3::SLE:
+                return 'Sierra Leone';
+            case Country::SG:
+            case CountryAlpha3::SGP:
+                return 'Singapore';
+            case Country::SX:
+            case CountryAlpha3::SXM:
+                return 'Sint Maarten (Dutch part)';
+            case Country::SK:
+            case CountryAlpha3::SVK:
+                return 'Slovakia';
+            case Country::SI:
+            case CountryAlpha3::SVN:
+                return 'Slovenia';
+            case Country::SB:
+            case CountryAlpha3::SLB:
+                return 'Solomon Islands';
+            case Country::SO:
+            case CountryAlpha3::SOM:
+                return 'Somalia';
+            case Country::ZA:
+            case CountryAlpha3::ZAF:
+                return 'South Africa';
+            case Country::GS:
+            case CountryAlpha3::SGS:
+                return 'South Georgia and the South Sandwich Islands';
+            case Country::SS:
+            case CountryAlpha3::SSD:
+                return 'South Sudan';
+            case Country::ES:
+            case CountryAlpha3::ESP:
+                return 'Spain';
+            case Country::LK:
+            case CountryAlpha3::LKA:
+                return 'Sri Lanka';
+            case Country::SD:
+            case CountryAlpha3::SDN:
+                return 'Sudan (the)';
+            case Country::SR:
+            case CountryAlpha3::SUR:
+                return 'Suriname';
+            case Country::SJ:
+            case CountryAlpha3::SJM:
+                return 'Svalbard and Jan Mayen';
+            case Country::SE:
+            case CountryAlpha3::SWE:
+                return 'Sweden';
+            case Country::CH:
+            case CountryAlpha3::CHE:
+                return 'Switzerland';
+            case Country::SY:
+            case CountryAlpha3::SYR:
+                return 'Syrian Arab Republic (the)';
+            case Country::TW:
+            case CountryAlpha3::TWN:
+                return 'Taiwan (Province of China)';
+            case Country::TJ:
+            case CountryAlpha3::TJK:
+                return 'Tajikistan';
+            case Country::TZ:
+            case CountryAlpha3::TZA:
+                return 'Tanzania, the United Republic of';
+            case Country::TH:
+            case CountryAlpha3::THA:
+                return 'Thailand';
+            case Country::TL:
+            case CountryAlpha3::TLS:
+                return 'Timor-Leste';
+            case Country::TG:
+            case CountryAlpha3::TGO:
+                return 'Togo';
+            case Country::TK:
+            case CountryAlpha3::TKL:
+                return 'Tokelau';
+            case Country::TO:
+            case CountryAlpha3::TON:
+                return 'Tonga';
+            case Country::TT:
+            case CountryAlpha3::TTO:
+                return 'Trinidad and Tobago';
+            case Country::TN:
+            case CountryAlpha3::TUN:
+                return 'Tunisia';
+            case Country::TM:
+            case CountryAlpha3::TKM:
+                return 'Turkmenistan';
+            case Country::TC:
+            case CountryAlpha3::TCA:
+                return 'Turks and Caicos Islands (the)';
+            case Country::TV:
+            case CountryAlpha3::TUV:
+                return 'Tuvalu';
+            case Country::TR:
+            case CountryAlpha3::TUR:
+                return 'Turkiye';
+            case Country::UG:
+            case CountryAlpha3::UGA:
+                return 'Uganda';
+            case Country::UA:
+            case CountryAlpha3::UKR:
+                return 'Ukraine';
+            case Country::AE:
+            case CountryAlpha3::ARE:
+                return 'United Arab Emirates (the)';
+            case Country::GB:
+            case CountryAlpha3::GBR:
+                return 'United Kingdom of Great Britain and Northern Ireland (the)';
+            case Country::UM:
+            case CountryAlpha3::UMI:
+                return 'United States Minor Outlying Islands (the)';
+            case Country::US:
+            case CountryAlpha3::USA:
+                return 'United States of America (the)';
+            case Country::UY:
+            case CountryAlpha3::URY:
+                return 'Uruguay';
+            case Country::UZ:
+            case CountryAlpha3::UZB:
+                return 'Uzbekistan';
+            case Country::VU:
+            case CountryAlpha3::VUT:
+                return 'Vanuatu';
+            case Country::VE:
+            case CountryAlpha3::VEN:
+                return 'Venezuela (Bolivarian Republic of)';
+            case Country::VN:
+            case CountryAlpha3::VNM:
+                return 'Viet Nam';
+            case Country::VG:
+            case CountryAlpha3::VGB:
+                return 'Virgin Islands (British)';
+            case Country::VI:
+            case CountryAlpha3::VIR:
+                return 'Virgin Islands (U.S.)';
+            case Country::WF:
+            case CountryAlpha3::WLF:
+                return 'Wallis and Futuna';
+            case Country::EH:
+            case CountryAlpha3::ESH:
+                return 'Western Sahara*';
+            case Country::YE:
+            case CountryAlpha3::YEM:
+                return 'Yemen';
+            case Country::ZM:
+            case CountryAlpha3::ZMB:
+                return 'Zambia';
+            case Country::ZW:
+            case CountryAlpha3::ZWE:
+                return 'Zimbabwe';
+            case Country::AX:
+            case CountryAlpha3::ALA:
+                return 'Aland Islands';
+        };
+        throw new CountryException('No numeric match for  ' . $country->name);
+    }
 }
