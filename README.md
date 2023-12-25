@@ -1,5 +1,8 @@
 ![Test Coverage Badge](https://img.shields.io/endpoint?url=https%3A%2F%2Fgist.githubusercontent.com%2Falexconrad%2F058ff77d1bc530d5fa977cf97a764752%2Fraw%2Fenum-countries-cobertura-coverage.json)
-
+[![Latest Stable Version](http://poser.pugx.org/alexconrad/enum-countries/v)](https://packagist.org/packages/alexconrad/enum-countries) 
+[![Total Downloads](http://poser.pugx.org/alexconrad/enum-countries/downloads)](https://packagist.org/packages/alexconrad/enum-countries) 
+[![License](http://poser.pugx.org/alexconrad/enum-countries/license)](https://packagist.org/packages/alexconrad/enum-countries) 
+[![PHP Version Require](http://poser.pugx.org/alexconrad/enum-countries/require/php)](https://packagist.org/packages/alexconrad/enum-countries)
 
 # enum-countries
 Provides ENUM classes for ISO-3166-1 alpha2 and alpha3 country codes.
