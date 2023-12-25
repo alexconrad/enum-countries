@@ -15,7 +15,7 @@ jobs:
           vendor/bin/phpcs
       - name: PHP Unit tests
         run: |
-          vendor/bin/phpunit --log-junit report.xml
+          vendor/bin/phpunit --coverage-cobertura report.xml
       - name: Create coverage badges
         uses: gaelgirodon/ci-badges-action@v1
         with:
