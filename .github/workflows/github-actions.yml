@@ -13,6 +13,9 @@ jobs:
       - name: PHP Code sniffer
         run: |
           vendor/bin/phpcs
+      - name: Psalm
+        run: |
+          vendor/bin/psalm
       - name: PHP Unit tests
         run: |
           php -dxdebug.mode=coverage vendor/bin/phpunit --coverage-cobertura coverage.xml --coverage-filter src/

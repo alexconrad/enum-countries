@@ -88,7 +88,7 @@ foreach ($alpha3map as $alpha2 => $alpha3) {
 /** @see \EnumCountriesIso3166\Country */
 $contentCountryAlpha2 = file_get_contents(__DIR__ . '/templates/Country.txt');
 $contentCountryAlpha2 = str_replace(R_NAMESPACE, $useNamespace, $contentCountryAlpha2);
-$parts = explode(R_SEPARATOR, $contentCountryAlpha2, 2);
+$parts = explode(R_SEPARATOR, $contentCountryAlpha2);
 $contentCountryAlpha2 = $parts[0] . rtrim($countryAlpha2) . $parts[1];
 
 $fp = fopen($destination . 'Country.php', 'wb');
@@ -99,7 +99,7 @@ fclose($fp);
 /** @see \EnumCountriesIso3166\CountryAlpha3 */
 $contentCountryAlpha3 = file_get_contents(__DIR__ . '/templates/CountryAlpha3.txt');
 $contentCountryAlpha3 = str_replace(R_NAMESPACE, $useNamespace, $contentCountryAlpha3);
-$parts = explode(R_SEPARATOR, $contentCountryAlpha3, 2);
+$parts = explode(R_SEPARATOR, $contentCountryAlpha3);
 $contentCountryAlpha3 = $parts[0] . rtrim($countryAlpha3) . $parts[1];
 
 $fp = fopen($destination . 'CountryAlpha3.php', 'wb');

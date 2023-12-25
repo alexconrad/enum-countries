@@ -11,6 +11,8 @@ use PHPUnit\Framework\TestCase;
 
 class CountryServiceTest extends TestCase
 {
+    private CountryService $sut;
+
     public static function alpha2Provider(): array
     {
         return [
