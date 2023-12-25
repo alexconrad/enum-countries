@@ -83,4 +83,17 @@ class CountryServiceTest extends TestCase
         $sameAlpha3 = $this->sut->alpha3($alpha2);
         self::assertSame($alpha3, $sameAlpha3, $alpha3->name . " numeric conversion failed.");
     }
+
+    /**
+     * @dataProvider alpha2Provider
+     * @param  Country  $alpha2
+     * @return void
+     */
+    public function testNames(Country $alpha2): void
+    {
+        $alpha3 = $this->sut->alpha3($alpha2);
+        $nameAlpha2 = $this->sut->getName($alpha2);
+        $nameAlpha3 = $this->sut->getName($alpha3);
+        self::assertSame($nameAlpha2, $nameAlpha3, $alpha2->name . " name doest match alpha3.");
+    }
 }
