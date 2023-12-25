@@ -1,4 +1,5 @@
-![Coverage](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/alexconrad/058ff77d1bc530d5fa977cf97a764752/raw/enum-countries-cobertura-coverage.json)
+![Test Coverage Badge](https://img.shields.io/endpoint?url=https%3A%2F%2Fgist.githubusercontent.com%2Falexconrad%2F058ff77d1bc530d5fa977cf97a764752%2Fraw%2Fenum-countries-cobertura-coverage.json)
+
 
 # enum-countries
 Provides ENUM classes for ISO-3166-1 alpha2 and alpha3 country codes.
