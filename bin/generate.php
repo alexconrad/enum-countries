@@ -58,13 +58,15 @@ $alpha3map = [];
 $alpha2numeric = [];
 $countryAlpha2 = '';
 $countryAlpha3 = '';
+$countryNames = [];
 while ($parts = fgetcsv($fp)) {
     $asciiCountryName = transliterator_transliterate('Any-Latin; Latin-ASCII;', $parts[0]);
 
-    $countryAlpha2 .= $tab . 'case ' . $parts[2] . ' = \'' . addcslashes($asciiCountryName, '\'') . '\';' . "\n";
-    $countryAlpha3 .= $tab . 'case ' . $parts[3] . ' = \'' . addcslashes($asciiCountryName, '\'') . '\';' . "\n";
+    $countryAlpha2 .= $tab . 'case ' . $parts[2] . ' = \'' . $parts[2] . '\';' . "\n";
+    $countryAlpha3 .= $tab . 'case ' . $parts[3] . ' = \'' . $parts[3] . '\';' . "\n";
     $alpha3map[$parts[2]] = $parts[3];
     $alpha2numeric[$parts[2]] = (int)$parts[4];
+    $countryNames[$parts[2]] = $asciiCountryName;
 }
 fclose($fp);
 
@@ -72,12 +74,15 @@ $methodAlpha3 = '';
 $methodAlpha2 = '';
 $methodNumeric = '';
 $methodFromNumeric = '';
+$methodName = '';
 foreach ($alpha3map as $alpha2 => $alpha3) {
     $methodAlpha3 .= "{$tab}{$tab}{$tab}case Country::{$alpha2}:\n{$tab}{$tab}{$tab}{$tab}return CountryAlpha3::{$alpha3};\n";
     $methodAlpha2 .= "{$tab}{$tab}{$tab}case CountryAlpha3::{$alpha3}:\n{$tab}{$tab}{$tab}{$tab}return Country::{$alpha2};\n";
     $methodNumeric .= "{$tab}{$tab}{$tab}case Country::{$alpha2}:\n{$tab}{$tab}{$tab}case CountryAlpha3::{$alpha3}:\n"
         . "{$tab}{$tab}{$tab}{$tab}return {$alpha2numeric[$alpha2]};\n";
     $methodFromNumeric .= "{$tab}{$tab}{$tab}{$alpha2numeric[$alpha2]} => Country::{$alpha2},\n";
+    $methodName .= "{$tab}{$tab}{$tab}case Country::{$alpha2}:\n{$tab}{$tab}{$tab}case CountryAlpha3::{$alpha3}:\n"
+        . "{$tab}{$tab}{$tab}{$tab}return '" . addcslashes($countryNames[$alpha2], '\'') . "';\n";
 }
 
 /** @see \EnumCountriesIso3166\Country */
@@ -87,7 +92,8 @@ $parts = explode(R_SEPARATOR, $contentCountryAlpha2, 2);
 $contentCountryAlpha2 = $parts[0] . rtrim($countryAlpha2) . $parts[1];
 
 $fp = fopen($destination . 'Country.php', 'wb');
-fwrite($fp, $contentCountryAlpha2);
+$bytes = fwrite($fp, $contentCountryAlpha2);
+echo "Wrote $bytes in {$destination}Country.php\n";
 fclose($fp);
 
 /** @see \EnumCountriesIso3166\CountryAlpha3 */
@@ -97,7 +103,8 @@ $parts = explode(R_SEPARATOR, $contentCountryAlpha3, 2);
 $contentCountryAlpha3 = $parts[0] . rtrim($countryAlpha3) . $parts[1];
 
 $fp = fopen($destination . 'CountryAlpha3.php', 'wb');
-fwrite($fp, $contentCountryAlpha3);
+$bytes = fwrite($fp, $contentCountryAlpha3);
+echo "Wrote $bytes in {$destination}CountryAlpha3.php\n";
 fclose($fp);
 
 /** @see \EnumCountriesIso3166\CountryService */
@@ -112,8 +119,11 @@ $contentCountryService = $parts[0]
     . rtrim($methodNumeric)
     . $parts[3]
     . rtrim($methodFromNumeric)
-    . $parts[4];
+    . $parts[4]
+    . rtrim($methodName)
+    . $parts[5];
 
 $fp = fopen($destination . 'CountryService.php', 'wb');
-fwrite($fp, $contentCountryService);
+$bytes = fwrite($fp, $contentCountryService);
+echo "Wrote $bytes in {$destination}CountryService.php\n";
 fclose($fp);
